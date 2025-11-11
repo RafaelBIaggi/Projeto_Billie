@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="container" class="row">
+    <div id="nav_bar" class="col font-nav-bar"  >
+        <div id="logo" class="logo-content">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="100px" height="100px" viewBox="0 0 3840.000000 2160.000000"
+ preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,2160.000000) scale(0.100000,-0.100000)"
+fill="#E8F0F2" stroke="none">
+<path d="M17345 21464 c-99 -15 -240 -48 -319 -75 -799 -272 -1233 -1133 -979
+-1943 76 -242 254 -520 435 -678 303 -266 652 -399 1043 -399 646 0 1207 382
+1447 986 42 105 83 266 97 380 13 106 6 350 -13 450 -91 492 -399 906 -831
+1119 -234 114 -406 156 -670 161 -99 2 -193 1 -210 -1z"/>
+<path d="M21985 19824 c-154 -17 -304 -62 -625 -189 -129 -51 -356 -141 -505
+-200 -813 -322 -2336 -929 -2715 -1083 -598 -243 -1255 -513 -1370 -562 -25
+-11 -93 -39 -151 -64 -847 -355 -1420 -948 -1668 -1726 -63 -198 -114 -475
+-127 -681 -3 -52 -7 -121 -9 -154 -24 -372 -27 -5423 -4 -5585 48 -336 296
+-623 634 -733 282 -93 586 -43 822 134 181 136 301 326 356 564 21 90 21 100
+27 2425 4 1876 8 2339 18 2358 11 19 21 22 67 22 l55 0 1 -6532 c0 -3593 2
+-6540 3 -6548 2 -8 6 -53 10 -100 23 -282 130 -514 328 -707 195 -190 427
+-303 688 -334 386 -46 844 175 1065 515 104 159 160 335 174 549 5 67 9 2044
+10 4392 1 2349 4 4280 7 4293 14 53 140 72 189 30 l25 -23 3 -3395 2 -3395 22
+-95 c58 -253 162 -437 334 -593 359 -326 810 -411 1223 -230 163 72 274 147
+399 270 185 184 281 399 308 693 8 93 9 1864 4 6860 -4 4230 -3 6764 3 6813 6
+50 16 85 28 98 37 41 142 49 178 14 12 -13 14 -339 16 -2431 1 -2589 -1 -2491
+50 -2638 85 -248 271 -448 501 -542 147 -60 350 -79 520 -49 366 64 646 359
+709 746 6 43 10 1120 10 3290 0 3514 4 3279 -55 3484 -33 114 -118 293 -193
+404 -79 118 -272 312 -389 389 -244 161 -500 241 -788 247 -82 2 -168 1 -190
+-1z"/>
+</g>
+            </svg>
+            <label id="label_img_logo" for="img_logo">BILLIE EILISH</label>
+        </div>
+        <hr>
+        <div onclick="selecionarHome()" id="home" class="item-nav-bar" tabindex="0" autofocus>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+            <label id="label_home" for="home">HOME</label>
+        </div>
+        <div onclick="selecionarQuiz()" id="quiz" class="item-nav-bar" tabindex="0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-question-mark" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg>
+            <label id="label_quiz" for="quiz">QUIZ</label>
+        </div>
+        <div onclick="selecionarLogin()" id="login" class="item-nav-bar" tabindex="0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-in" aria-hidden="true"><path d="m10 17 5-5-5-5"></path><path d="M15 12H3"></path><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path></svg>    
+            <label id="label_login" for="login">LOG-IN</label>
+        </div>
+        <div onclick="selecionarSignUp()" id="sign_up" class="item-nav-bar" tabindex="0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-plus" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><line x1="19" x2="19" y1="8" y2="14"></line><line x1="22" x2="16" y1="11" y2="11"></line></svg>            
+            <label id="label_sign_up" for="sign_up">SIGN-UP</label>
+        </div>        
+    </div>
+    <div id="main" class="col">
+        
+    </div>
+</div>
+</body>
+</html>
+<script>
+    
+    var home = document.getElementById("home")
+    var quiz = document.getElementById("quiz")
+    var login = document.getElementById("login")
+    var signUp = document.getElementById("sign_up")
+
+
+    function selecionarHome(){
+        this.resetarNav();
+        home.style.background = "#00D4FF"
+        home.style.color = "#2E2E2E"
+    }
+    function selecionarQuiz(){
+        this.resetarNav();
+        quiz.style.background = "#00D4FF"
+        quiz.style.color = "#2E2E2E"
+    }
+    function selecionarLogin(){
+        this.resetarNav();
+        login.style.background = "#00D4FF"
+        login.style.color = "#2E2E2E"
+    }
+    function selecionarSignUp(){
+        this.resetarNav();
+        signUp.style.background = "#00D4FF"
+        signUp.style.color = "#2E2E2E"
+    }
+
+    function resetarNav(){
+        home.style.background = "#2E2E2E"
+        home.style.color = "#E8F0F2"
+        quiz.style.background = "#2E2E2E"
+        quiz.style.color = "#E8F0F2"
+        login.style.background = "#2E2E2E"
+        login.style.color = "#E8F0F2"
+        signUp.style.background = "#2E2E2E"
+        signUp.style.color = "#E8F0F2"
+    }
+</script>

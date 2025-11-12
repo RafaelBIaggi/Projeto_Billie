@@ -11,23 +11,26 @@ html, body {
 
 .col:first-child{
     flex: 1;
-    background-color: #2E2E2E;
+    background-color: #0D0D0D;
     padding:30px;
     
 }
 
 .col:last-child{
+    display: flex;
     flex: 5;
-    background-color: #0A3D62
+    background-image: url("../assets/FUNDO_BILLIE.png");
+    align-items: start;
+    justify-content: center;
 }
 
 hr {
   border: none;           
-  border-top: 2px solid #00D4FF; 
+  border-top: 2px solid #39FF14; 
   margin-bottom: 40px;
 }
 .font-nav-bar{
-    color: #E8F0F2;
+    color: #F5F5F5;
 }
 
 .logo-content{
@@ -42,7 +45,7 @@ hr {
     margin: 20px 10px 20px 10px;
     padding: 10px;
     border-radius: 15px;
-    color: #E8F0F2; 
+    color: #F5F5F5; 
     align-items: center;
 }
 
@@ -50,7 +53,7 @@ hr {
     transition-duration: 0.5s ;
     padding: 10px;
     border-radius: 15px;
-    color: #E8F0F2;
+    color: #F5F5F5;
     transform: translateX(10px) scale(1.05);
 }
 
@@ -59,7 +62,15 @@ svg{
 }
 
 .item-nav-bar:focus{
-    background-color: #00D4FF;
+    background-color: #39FF14;
     color: #2E2E2E;
     outline: 0;
+}
+
+.container-main{
+    background-color: #000000af;
+    width: 90%;
+    height: 90%;
+    margin-top: 4%;
+    border-radius: 70px;
 }

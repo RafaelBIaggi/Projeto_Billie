@@ -41,7 +41,7 @@ fill="#E8F0F2" stroke="none">
             <label id="label_img_logo" for="img_logo">BILLIE EILISH</label>
         </div>
         <hr>
-        <div onclick="selecionarHome()" id="home" class="item-nav-bar" tabindex="0" autofocus>
+        <div onclick="selecionarHome()" id="home" class="item-nav-bar" tabindex="0" style="background-color: #39FF14; color: #1C1C1C;">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
             <label id="label_home" for="home">HOME</label>
         </div>
@@ -56,10 +56,13 @@ fill="#E8F0F2" stroke="none">
         <div onclick="selecionarSignUp()" id="sign_up" class="item-nav-bar" tabindex="0">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-plus" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><line x1="19" x2="19" y1="8" y2="14"></line><line x1="22" x2="16" y1="11" y2="11"></line></svg>            
             <label id="label_sign_up" for="sign_up">SIGN-UP</label>
+        </div>
+        <div onclick="selecionarAlbums()" id="albums" class="item-nav-bar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.00033 7H20.0003M5.00033 4H19.0003M6.89629 20H17.1044C18.1275 20 18.639 20 19.0447 19.8084C19.402 19.6396 19.7012 19.3687 19.9047 19.03C20.1358 18.6454 20.1867 18.1364 20.2885 17.1184L20.7365 12.6388C20.8279 11.7244 20.8736 11.2672 20.7236 10.9138C20.5918 10.6034 20.3593 10.3465 20.0635 10.1844C19.7268 10 19.2673 10 18.3484 10H5.6523C4.73336 10 4.27389 10 3.93718 10.1844C3.64141 10.3465 3.40887 10.6034 3.27708 10.9138C3.12706 11.2672 3.17278 11.7244 3.26422 12.6388L3.71218 17.1184C3.81398 18.1364 3.86488 18.6454 4.09593 19.03C4.29943 19.3687 4.59872 19.6396 4.95601 19.8084C5.36167 20 5.87321 20 6.89629 20ZM15.0003 15C15.0003 16.1046 13.6572 17 12.0003 17C10.3435 17 9.00033 16.1046 9.00033 15C9.00033 13.8954 10.3435 13 12.0003 13C13.6572 13 15.0003 13.8954 15.0003 15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>            <label id="label_home" for="home">ALBUMS</label>
         </div>        
     </div>
     <div id="main" class="col">
-        
+        <div id="content_main" class = "container-main"></div>
     </div>
 </div>
 </body>
@@ -70,37 +73,45 @@ fill="#E8F0F2" stroke="none">
     var quiz = document.getElementById("quiz")
     var login = document.getElementById("login")
     var signUp = document.getElementById("sign_up")
+    var albums = document.getElementById("albums")
 
 
     function selecionarHome(){
-        this.resetarNav();
-        home.style.background = "#00D4FF"
-        home.style.color = "#2E2E2E"
+        resetarNav();
+        home.style.background = "#39FF14"
+        home.style.color = "#1C1C1C"
     }
     function selecionarQuiz(){
-        this.resetarNav();
-        quiz.style.background = "#00D4FF"
-        quiz.style.color = "#2E2E2E"
+        resetarNav();
+        quiz.style.background = "#39FF14"
+        quiz.style.color = "#1C1C1C"
     }
     function selecionarLogin(){
-        this.resetarNav();
-        login.style.background = "#00D4FF"
-        login.style.color = "#2E2E2E"
+        resetarNav();
+        login.style.background = "#39FF14"
+        login.style.color = "#1C1C1C"
     }
     function selecionarSignUp(){
-        this.resetarNav();
-        signUp.style.background = "#00D4FF"
-        signUp.style.color = "#2E2E2E"
+        resetarNav();
+        signUp.style.background = "#39FF14"
+        signUp.style.color = "#1C1C1C"
+    }
+    function selecionarAlbums(){
+        resetarNav();
+        albums.style.background = "#39FF14"
+        albums.style.color = "#1C1C1C"
     }
 
     function resetarNav(){
-        home.style.background = "#2E2E2E"
+        home.style.background = "#0D0D0D"
         home.style.color = "#E8F0F2"
-        quiz.style.background = "#2E2E2E"
+        quiz.style.background = "#0D0D0D"
         quiz.style.color = "#E8F0F2"
-        login.style.background = "#2E2E2E"
+        login.style.background = "#0D0D0D"
         login.style.color = "#E8F0F2"
-        signUp.style.background = "#2E2E2E"
+        signUp.style.background = "#0D0D0D"
         signUp.style.color = "#E8F0F2"
+        albums.style.background = "#0D0D0D"
+        albums.style.color = "#E8F0F2"
     }
 </script>

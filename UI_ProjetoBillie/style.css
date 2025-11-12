@@ -26,7 +26,7 @@ html, body {
 
 hr {
   border: none;           
-  border-top: 2px solid #39FF14; 
+  border-top: 2px solid #c1ff72; 
   margin-bottom: 40px;
 }
 .font-nav-bar{
@@ -62,7 +62,7 @@ svg{
 }
 
 .item-nav-bar:focus{
-    background-color: #39FF14;
+    background-color: #c1ff72;
     color: #2E2E2E;
     outline: 0;
 }
@@ -74,3 +74,4 @@ svg{
     margin-top: 4%;
     border-radius: 70px;
 }
+

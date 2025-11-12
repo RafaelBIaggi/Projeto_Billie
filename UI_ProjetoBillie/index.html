@@ -41,7 +41,7 @@ fill="#E8F0F2" stroke="none">
             <label id="label_img_logo" for="img_logo">BILLIE EILISH</label>
         </div>
         <hr>
-        <div onclick="selecionarHome()" id="home" class="item-nav-bar" tabindex="0" style="background-color: #39FF14; color: #1C1C1C;">
+        <div onclick="selecionarHome()" id="home" class="item-nav-bar" tabindex="0" style="background-color: #c1ff72; color: #1C1C1C;">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
             <label id="label_home" for="home">HOME</label>
         </div>
@@ -62,7 +62,21 @@ fill="#E8F0F2" stroke="none">
         </div>        
     </div>
     <div id="main" class="col">
-        <div id="content_main" class = "container-main"></div>
+        <div id="content_main" class = "container-main">
+            <div id="home_content">
+            <h2>Seja Bem Vindo ao Mundo Billie</h2><br><br>
+            <label for="home_content">Descubra tudo sobre a vida e carreira desta incrível artista.</label><br>
+            
+            <div id="main_text" for ="home_content"><h3>Sua Infância</h3><br> Billie Eilish Pirate Baird O'Connel nasceu em 18 de dezembro de 2001 em Los Angeles,
+                filha dos atores Maggie Baird e Patrick O'Connel, que rapidamente inseriram a filha no mundo da música, com 8 anos Billie já cantava
+                no Coro Infantil de Los Angeles e aos 11 anos já compunha músicas com seu irmão Finneas O'Connel. <br><br>
+                <h3>Inicio de Carreira</h3><br><br>Aos 13 anos Billie gravou a música "Ocean Eyes", composta por Finneas, que em 18 de Novembro de 2015
+                foi lançada no SoundCloud. "Oceas Eyes" chamou a atenção da mídia e rapidamente viralizou, hoje a música conta com mais de 2 bilhões de streams no Spotify.
+                O sucesso repentino levou a cuma parceria com a gravadora DarkRoom.
+                
+            </div>
+            </div>
+        </div>
     </div>
 </div>
 </body>
@@ -78,27 +92,27 @@ fill="#E8F0F2" stroke="none">
 
     function selecionarHome(){
         resetarNav();
-        home.style.background = "#39FF14"
+        home.style.background = "#c1ff72"
         home.style.color = "#1C1C1C"
     }
     function selecionarQuiz(){
         resetarNav();
-        quiz.style.background = "#39FF14"
+        quiz.style.background = "#c1ff72"
         quiz.style.color = "#1C1C1C"
     }
     function selecionarLogin(){
         resetarNav();
-        login.style.background = "#39FF14"
+        login.style.background = "#c1ff72"
         login.style.color = "#1C1C1C"
     }
     function selecionarSignUp(){
         resetarNav();
-        signUp.style.background = "#39FF14"
+        signUp.style.background = "#c1ff72"
         signUp.style.color = "#1C1C1C"
     }
     function selecionarAlbums(){
         resetarNav();
-        albums.style.background = "#39FF14"
+        albums.style.background = "#c1ff72"
         albums.style.color = "#1C1C1C"
     }
 

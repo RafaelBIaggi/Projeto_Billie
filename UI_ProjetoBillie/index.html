@@ -79,9 +79,7 @@ fill="#E8F0F2" stroke="none">
                     O sucesso repentino levou a uma parceria com a gravadora DarkRoom e Interscope Records<br><br>
                     <h3></h3>
                 </div>
-            </div>  -->
-            <div id="content_main" class = "container-main">
-               
+            </div>  -->               
                 <div id="home_content">
                     <h2>Bem Vindo ao Mundo Billie</h2><br><br>
                     <p>conteúdo HOME</p>
@@ -101,43 +99,43 @@ fill="#E8F0F2" stroke="none">
                     <p>conteúdo Login</p>
                 </div>
 
-                <div id="signin_content">
-                    <h2>Bem Vindo ao Sign-up</h2><br><br>
+                <div id="signup_content">
                     <div class="formulario">
-                        <div class="linha">
+                        <h1>Cadastre-se</h1><br><br>
+                        <div class="cadastro-content">
                             <div class="campo">
-                                <label for="username_input">Username</label>
-                                <input id="username_input" type="text">
-                                <span id="span_validar_username"></span>
-                            </div>                            
-                        </div>
-                            <div class="campo">
-                                <label for="senha_input">Senha</label>
-                                <input oninput="validarSenha()" id="senha_input" type="password" maxlength="20"><br>
-                            </div>
-                            <div class="validacao-senha-mensagem">
-                                <label id="inicio_requisitos">A senha deve conter:</label><br>
-                                <label id="label_validar_letras">Letras maiúsculas e minúsculas</label><br>
-                                <label id="label_validar_numeros">Ao menos 1 número</label><br>
-                                <label id="label_validar_simbolos">Ao menos 1 símbolo (!@#$%&*_-./)</label><br>
-                                <label id="label_validar_tamanho">De 8 a 20 caracteres</label>
-                            </div><br>
-                            <div class="campo">
-                                <label for="confirmar_senha_input">Confirme a senha</label>
-                                <input disabled="true" onblur="validarConfirmacao()" id="confirmar_senha_input" type="password">
-                                <span id="span_validar_cfmSenha"></span>
-                            </div>
+                                    <label for="username_input">Username</label>  <br>
+                                    <input onblur ="validarUsername()" id="username_input" type="text">
+                                    <label id="label_validar_username"></label>
+                                </div>                            
+                                <div class="campo">
+                                    <label for="senha_input">Senha</label> <br>
+                                    <input oninput="validarSenha()" id="senha_input" type="password" maxlength="20">
+                                </div>
+                                <div class="validacao-senha-mensagem">
+                                    <label id="inicio_requisitos">A senha deve conter:</label><br>
+                                    <label id="label_validar_letras">Letras maiúsculas e minúsculas</label><br>
+                                    <label id="label_validar_numeros">Ao menos 1 número</label><br>
+                                    <label id="label_validar_simbolos">Ao menos 1 símbolo (!@#$%&*_-./)</label><br>
+                                    <label id="label_validar_tamanho">De 8 a 20 caracteres</label>
+                                </div>
+                                <div class="campo">
+                                    <label for="confirmar_senha_input">Confirme a senha</label> <br>
+                                    <input disabled="true" onblur="validarConfirmacao()" id="confirmar_senha_input" type="password">
+                                    <label id="label_validar_cfmSenha"></label>
+                                </div>
 
-                            <div class="campo">
-                                <label for="email_input">Email</label>
-                                <input onblur="validarEmail()" id="email_input" type="text">
-                                <span id="span_validar_email"></span>
-                            </div>
+                                <div class="campo">
+                                    <label for="email_input">Email</label> <br>
+                                    <input onblur="validarEmail()" id="email_input" type="text">
+                                    <label id="label_validar_email"></label>
+                                </div>
 
-                        <div class="botao">
-                            <button onclick="cadastrar()" type="button">CADASTRAR</button>
+                            <div class="botao">
+                                <button onclick="cadastrar()" type="button">CADASTRAR</button>
+                            </div>
+                            <label id="label_verificar_campos"></label>
                         </div>
-                        <span id="span_verificar_campos"></span>
                     </div>
                 </div>
 
@@ -147,7 +145,6 @@ fill="#E8F0F2" stroke="none">
                 </div>
             </div>
 
-        </div>
     </div>
 </div>
 </body>
@@ -163,7 +160,7 @@ fill="#E8F0F2" stroke="none">
     var homeContent =  document.getElementById("home_content")
     var quizContent =  document.getElementById("quiz_content")
     var loginContent =  document.getElementById("login_content")
-    var signupContent =  document.getElementById("signin_content")
+    var signupContent =  document.getElementById("signup_content")
     var albumsContent =  document.getElementById("albums_content")
 
     var usernameInvalido = true;
@@ -174,7 +171,27 @@ fill="#E8F0F2" stroke="none">
     var numerosPermitidos = "0123456789";
 
 
+    var username = "";
     var senha = "";
+    var cfm = "";
+    var email = "";
+
+
+    function validarUsername() {
+        var username = username_input.value.trim();
+
+        if (username.lenght < 3) {
+            usernameInvalido = true;
+        } else {
+            usernameInvalido = false;
+        }
+
+        if (usernameInvalido) {
+            label_validar_username.innerHTML = "Digite um username válido.";
+        } else {
+            label_validar_username.innerHTML = "";
+        }
+    }
 
 
     function validarSenha() {
@@ -245,6 +262,42 @@ fill="#E8F0F2" stroke="none">
         }
     }
 
+
+    function validarEmail() {
+        var email = email_input.value.trim();
+        emailInvalido = true;
+
+        if (email.includes(" ")) {
+            emailInvalido = true;
+        } else if (
+            email.endsWith("@gmail.com") ||
+            email.endsWith("@hotmail.com") ||
+            email.endsWith("@outlook.com") ||
+            email.endsWith("@sptech.school")
+        ) {
+            emailInvalido = false;
+        }
+
+        if (emailInvalido) {
+            label_validar_email.innerHTML = "Digite um email válido.";
+        } else {
+            label_validar_email.innerHTML = "";
+        }
+    }
+
+    function cadastrar() {
+        if (
+            !usernameInvalido &&
+            !emailInvalido &&
+            !senhaInvalida &&
+            !cfmSenhaInvalido
+        ) {
+            label_verificar_campos.innerHTML = "✅ Cadastro realizado com sucesso!";
+        } else {
+            label_verificar_campos.innerHTML = "⚠️ Preencha todos os campos corretamente.";
+        }
+    }
+    
     resetarConteudo();
     homeContent.style.display ="block"
 

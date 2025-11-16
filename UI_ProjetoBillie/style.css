@@ -21,7 +21,7 @@ html, body {
 .col:last-child{
     display: flex;
     flex: 20    ;
-    background-color: #191a1f;
+    background-color: #2b302c;
     background-size: 100%;
     align-items: start;
     justify-content: center;
@@ -74,7 +74,6 @@ svg{
 }
 
 .container-main{
-    background-color: #191a1f;
     width: 80%;
     height: 80%;
     padding: 60px;
@@ -82,12 +81,37 @@ svg{
     text-align: center;
 }
 
-.validacao-senha-mensagem{
-    
-    
-    
-    /* label{
-        background-color: #c1ff72;
-        margin-bottom: 100px;
-    } */
+.formulario{
+    display: flex;
+background-image: url(../assets/FUNDO_BILLIE_ESCURO.png);    background-size: cover;
+    border-radius: 15px;
+    height: 80vh;
+    width: 30vw;
+    flex-direction: column;
+    justify-self: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: left;
+    input{
+        background-color: #f1f1f1;
+        border-radius: 10px%;
+    }
+    h1{
+        text-align: center;
+    }
+
+.cadastro-content{
+    display: flex;
+    height: 70% ;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+.validacao-senha-mensagem{    
+    color: #868686;
+}
+#inicio_requisitos{
+    color: white;
+}
+
+

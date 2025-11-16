@@ -20,8 +20,8 @@ html, body {
 
 .col:last-child{
     display: flex;
-    flex: 5;
-    background-image: url("../assets/FUNDO_BILLIE.png");
+    flex: 20    ;
+    background-color: #191a1f;
     background-size: 100%;
     align-items: start;
     justify-content: center;
@@ -74,13 +74,20 @@ svg{
 }
 
 .container-main{
-    background-color: #000000e8;
+    background-color: #191a1f;
     width: 80%;
     height: 80%;
     padding: 60px;
-    margin-top: 4%;
-    border-radius: 70px;
     color: #F5F5F5;
     text-align: center;
 }
 
+.validacao-senha-mensagem{
+    
+    
+    
+    /* label{
+        background-color: #c1ff72;
+        margin-bottom: 100px;
+    } */
+}

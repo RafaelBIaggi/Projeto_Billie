@@ -1,0 +1,21 @@
+{
+  "name": "projeto_billie",
+  "version": "1.0.0",
+  "description": "Esse projeto foi projetado para fornecer informaçoes e aumentar o conhecimento sobre a cantora \"Billie Eilish\", sera desenvolvido em JavaScript e  para armasenamento dos dados utilizarei o MySQL,  serpa também utilizado as api's dat-aqu-ino e web-data-viz.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RafaelBIaggi/Projeto_Billie.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/RafaelBIaggi/Projeto_Billie/issues"
+  },
+  "homepage": "https://github.com/RafaelBIaggi/Projeto_Billie#readme"
+}

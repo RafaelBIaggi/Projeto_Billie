@@ -292,3 +292,30 @@ html, body {
     color: #c1ff72;
     text-shadow: 0 0 10px #00ff6a;
 }
+
+#grafico_container {
+    width: 80%;
+    margin: 40px auto;
+    padding: 25px;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(0, 255, 120, 0.3);
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 255, 120, 0.15);
+    backdrop-filter: blur(10px);
+}
+
+.quiz-btn{
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    background: #7aff8b;
+    color: black;
+    font-size: 16px;
+    transition: 0.2s;
+}
+.quiz-btn :hover{
+    background: #c1ff72;
+    box-shadow: 0 0 10px #00ff8844;
+}

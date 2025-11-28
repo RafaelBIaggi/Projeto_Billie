@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 <div id="container" class="col">
@@ -80,7 +81,7 @@ fill="#E8F0F2" stroke="none">
             
             
                 <div id="home_content">
-                <img src="../assets/Banner_cortado.png" alt="" class="banner">
+                <img src="./assets/Banner_cortado.png" alt="" class="banner">
 
                 <header class="hero">
     <div class="hero-content glass">
@@ -93,7 +94,7 @@ fill="#E8F0F2" stroke="none">
 
         <section class="section">
             <div class="img-container left" style="height: 450px;">
-                <img src="../assets/Foto_1.jpg" alt="Billie criança">
+                <img src="./assets/Foto_1.jpg" alt="Billie criança">
             </div>
             <div class="text-container glass">
                 <h2>Infância e Formação Musical</h2>
@@ -105,7 +106,7 @@ fill="#E8F0F2" stroke="none">
     
         <section class="section reverse">
             <div class="img-container right" style="height: 400px;">
-                <img src="../assets/FotoHome_2.png" alt="Billie Ocean Eyes">
+                <img src="./assets/FotoHome_2.png" alt="Billie Ocean Eyes">
             </div>
             <div class="text-container glass">
                 <h2>A Canção que Mudou Tudo: Ocean Eyes</h2>
@@ -117,7 +118,7 @@ fill="#E8F0F2" stroke="none">
     
         <section class="section">
             <div class="img-container left" style="height: 420px;">
-                <img src="../assets/FotoHome_3.png" alt="Billie 2019 verde neon">
+                <img src="./assets/FotoHome_3.png" alt="Billie 2019 verde neon">
             </div>
             <div class="text-container glass">
                 <h2>O Visual Verde Neon e a Estética Oversized</h2>
@@ -129,7 +130,7 @@ fill="#E8F0F2" stroke="none">
     
         <section class="section reverse">
             <div class="img-container right"  style="height: 420px;">
-                <img src="../assets/FotoHome_4.png" alt="Billie álbum 2019">
+                <img src="./assets/FotoHome_4.png" alt="Billie álbum 2019">
             </div>
             <div class="text-container glass">
                 <h2>O Álbum que Dominou o Mundo</h2>
@@ -141,7 +142,7 @@ fill="#E8F0F2" stroke="none">
     
         <section class="section">
             <div class="img-container left" style="height: 410px;">
-                <img src="../assets/Foto_7.jpg" alt="Billie no Grammy">
+                <img src="./assets/Foto_7.jpg" alt="Billie no Grammy">
             </div>
             <div class="text-container glass">
                 <h2>Prêmios e Reconhecimento Global</h2>
@@ -153,7 +154,7 @@ fill="#E8F0F2" stroke="none">
 
         <section class="section reverse">
             <div class="img-container right" style="height: 400px;">
-                <img src="../assets/FotoHome_6.png" alt="Billie e Finneas">
+                <img src="./assets/FotoHome_6.png" alt="Billie e Finneas">
             </div>
             <div class="text-container glass">
                 <h2>A Dupla que Revolucionou a Música</h2>
@@ -165,7 +166,7 @@ fill="#E8F0F2" stroke="none">
             
         <section class="section">
             <div class="img-container left">
-                <img src="../assets/FotoHome_7.png" alt="Billie futuro">
+                <img src="./assets/FotoHome_7.png" alt="Billie futuro">
             </div>
             <div class="text-container glass">
                 <h2>O Futuro: Evolução, Maturidade e Novos Caminhos</h2>
@@ -176,7 +177,7 @@ fill="#E8F0F2" stroke="none">
 
         <section class="section reverse">
             <div class="img-container right" style="height: 470px;">
-                <img src="../assets/FotoHome_8.jpg" alt="Billie vegana">
+                <img src="./assets/FotoHome_8.jpg" alt="Billie vegana">
             </div>
             <div class="text-container glass">
                 <h2>Billie E o Movimento Vegano</h2>
@@ -190,7 +191,7 @@ fill="#E8F0F2" stroke="none">
         
         <section class="section">
             <div class="img-container left" style="height: 470px;">
-                <img src="../assets/Foto_8.jpg" alt="Curiosidades Billie Eilish">
+                <img src="./assets/Foto_8.jpg" alt="Curiosidades Billie Eilish">
             </div>
             <div class="text-container glass">
                 <h2>Curiosidades Sobre Billie Eilish</h2>
@@ -205,7 +206,7 @@ fill="#E8F0F2" stroke="none">
                 <section class="quiz-section glass">
                     <h2>Prepare-se para o Quiz</h2>
                     <p>Após conhecer a trajetória completa da Billie Eilish, você poderá testar seus conhecimentos no nosso quiz especial. Faça login ou cadastre-se para começar!</p>
-                    <a href="#" class="quiz-btn">Ir para o Quiz</a>
+                    <button href="#" onclick="selecionarLogin()" class="quiz-btn">Fazer Log-in</button>
                 </section>
             </div>
 
@@ -296,9 +297,31 @@ fill="#E8F0F2" stroke="none">
                             <label><input type="radio" name="q10" value="D"> D) Separação criativa total</label>
                         </div>
 
-                        <button id="quiz_submit" type="button">Enviar Quiz</button>
+                        <button id="quiz_submit" onclick="corrigirQuiz()" type="button">Enviar Quiz</button>
 
                         <div id="quiz_result"></div>
+                        <div id="painel_resultados" style="display: none; display: flex; align-items: center; justify-content: space-around; margin-top: 20px;">
+                            
+                            <div style="width: 50%; height: 300px;">
+                                <canvas id="resultadoGrafico"></canvas> 
+                            </div>
+
+                            <div class="indicadores-container" style="display: flex; flex-direction: column; gap: 20px;">
+                                
+                                <div class="kpi-card" style="background: rgba(0,0,0,0.7); border: 2px solid #39ff14; padding: 20px; border-radius: 10px; text-align: center; width: 150px;">
+                                    <span style="color: #fff; font-size: 16px;">Porcentagem de Acertos</span>
+                                    <h2 id="kpi_porcentagem" style="color: #39ff14; font-size: 32px; margin: 10px 0;">0%</h2>
+                                </div>
+
+                                <div class="kpi-card" style="background: rgba(0,0,0,0.7); border: 2px solid #39ff14; padding: 20px; border-radius: 10px; text-align: center; width: 150px;">
+                                    <span style="color: #fff; font-size: 16px;">Tentativa</span>
+                                    <h2 id="kpi_tentativa" style="color: #39ff14; font-size: 32px; margin: 10px 0;">#1</h2>
+                                </div>
+
+                            </div>
+                        </div>
+
+
 
                     </form>
                 </section>
@@ -312,19 +335,20 @@ fill="#E8F0F2" stroke="none">
                     <form id="login-form">
                         <div class="campo">
                         <label for="login_email">Email</label>
-                        <input type="email" id="login_email" required>
+                        <input type="email" id="email_input_login" required>
                         </div>
 
                         <div class="campo">
                         <label for="login_senha">Senha</label>
-                        <input type="password" id="login_senha" required>
+                        <input type="password" id="senha_input_login" required>
                         </div>
 
                         <div class="botao">
-                        <button type="submit" class="btn-auth">Entrar</button>
+                        <button type="button" onclick="entrar()" class="btn-auth">Entrar</button>
                         </div>
                         Não tem conta?
-                        <span onclick="mostrarCadastro()" style="color:#c1ff72; cursor:pointer;"> Criar conta</span>
+                        <span onclick="selecionarSignUp(); limparSessao()" style="color:#c1ff72; "> Criar conta</span><br>
+                        <span id="verificar_login" class="msg-erro"></span>
                         </p>
                     </form>
                     </div>
@@ -417,6 +441,59 @@ fill="#E8F0F2" stroke="none">
     var email = "";
 
     var conteudoCompleto = false;
+
+selecionarLogout()
+
+function entrar() {
+    var emailVar = document.getElementById("email_input_login").value;
+    var senhaVar = document.getElementById("senha_input_login").value;
+
+    if (emailVar == "" || senhaVar == "") {
+        verificar_login.innerHTML = "Preencha todos os campos!"
+        return false;
+    }
+
+    fetch("http://localhost:3000/usuarios/autenticar", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            email: emailVar,
+            senha: senhaVar
+        })
+    })
+    .then(function (resposta) {
+        if (resposta.ok) {
+            resposta.json().then(json => {
+                
+                sessionStorage.ID_USUARIO = json.idUsuario;
+                sessionStorage.NOME_USUARIO = json.nome;
+                
+                verificar_login.innerHTML = `Login verificado com sucesso, seja Bem-Vindo ${json.nome}!`
+
+                document.getElementById("email_input_login").value = "";
+                document.getElementById("senha_input_login").value = "";
+
+                setTimeout(() => {
+                    selecionarHome();
+                    conteudoLogado()
+                    
+                }, 1500);
+            });
+
+        } else {
+            resposta.text().then(texto => {
+                verificar_login.innerHTML = "Preencha os campos corretamente."
+            });
+        }
+    })
+    .catch(function (erro) {
+        console.log(erro);
+    });
+
+    return false;
+}
 
     function validarUsername() {
         var username = username_input.value.trim();
@@ -528,17 +605,227 @@ fill="#E8F0F2" stroke="none">
 
     function cadastrar() {
         if (
-            !usernameInvalido &&
-            !emailInvalido &&
-            !senhaInvalida &&
-            !cfmSenhaInvalido
-        ) {
-            label_verificar_campos.innerHTML = "✅ Cadastro realizado com sucesso!";
+            usernameInvalido ||
+            emailInvalido ||
+            senhaInvalida ||
+            cfmSenhaInvalido
+        ) {label_verificar_campos.innerHTML = "⚠️ Preencha todos os campos corretamente.";
+            
         } else {
-            label_verificar_campos.innerHTML = "⚠️ Preencha todos os campos corretamente.";
+
+        
+            var nomeVar = document.getElementById("username_input").value;
+            var emailVar = document.getElementById("email_input").value;
+            var senhaVar = document.getElementById("senha_input").value;
+
+            if (nomeVar == "" || emailVar == "" || senhaVar == "") {
+                    
+                return false;
+            }
+
+            fetch("http://localhost:3000/usuarios/cadastrar", {
+                method: "POST", 
+                headers: {
+                    "Content-Type": "application/json" 
+                },
+                body: JSON.stringify({
+
+                    nome: nomeVar,
+                    email: emailVar,
+                    senha: senhaVar
+                })
+            })
+            .then(function (resposta) {
+                if (resposta.ok) {
+                    label_verificar_campos.innerHTML = "✅ Cadastro realizado com sucesso!";
+                    document.getElementById("username_input").value = ""; 
+                    document.getElementById("email_input").value = "";
+                    document.getElementById("senha_input").value = "";
+                    document.getElementById("confirmar_senha_input").value = "";              
+                    setTimeout(() => {
+                        selecionarLogin();
+                    }, 1000);
+                } else {
+                    resposta.text().then(texto => {
+                        alert("Erro ao cadastrar: " + texto);
+                    });
+                }
+            })
+            .catch(function (erro) {
+                console.log(`#ERRO: ${erro}`);
+            });
+
+            return false;
+
         }
     }
+
+var acertos = 0;
+var erros = 0;
+var pontos = 0;
+var grafico = null; 
+var listaDeRespostas = [];
+const gabarito = ['B', 'C', 'C', 'B', 'C', 'B', 'A', 'C', 'C', 'C'];
+
+function corrigirQuiz() {
+    acertos = 0;
+    erros = 0;
+    pontos = 0;
+    listaDeRespostas = []; 
+
+    const perguntas = ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10"];
+
+    for (let i = 0; i < perguntas.length; i++) {
+        const nomeRadio = perguntas[i]; 
+        const numeroQuestao = i + 1;
+        const respostaCerta = gabarito[i];
+        
+        var respostaUsuario = document.querySelector(`input[name="${nomeRadio}"]:checked`);
+        
+        if (!respostaUsuario) {
+            alert("Por favor, responda todas as questões antes de enviar!");
+            return; 
+        }
+
+        const valorEscolhido = respostaUsuario.value;
+        const acertouQuestao = (valorEscolhido === respostaCerta);
+
+        if (acertouQuestao) {
+            acertos++;
+        } else {
+            erros++;
+        }
+        
+        listaDeRespostas.push({
+            pergunta: numeroQuestao, 
+            acertou: acertouQuestao ? 1 : 0, 
+            tentativa: 1 
+        });
+    }
+
+    pontos = acertos * 10; 
+
+    document.getElementById("quiz_result").innerHTML =
+        `<h3>Você acertou ${acertos} de 10 questões! Pontuação: ${pontos}</h3>`;
+
+    finalizarQuiz();
+}
+
+function finalizarQuiz() {
+    var idUsuario = sessionStorage.ID_USUARIO;
+
+    if (!idUsuario) {
+        alert("Você precisa estar logado!");
+        return;
+    }
+
+    fetch("http://localhost:3000/partidas/salvar", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            idUsuario: idUsuario,
+            pontos: pontos,
+            acertos: acertos,
+            erros: erros,
+            detalhes: listaDeRespostas
+        })
+    })
+    .then(resposta => resposta.json())
+    .then(json => {
+
+        var valorAcertos = Number(acertos); 
+        var porcentagem = (valorAcertos / 10) * 100;
+        
+        var divPorcentagem = document.getElementById("kpi_porcentagem");
+        if (divPorcentagem) {
+            divPorcentagem.innerHTML = `${porcentagem.toFixed(0)}%`; 
+        }
+
+        var divTentativa = document.getElementById("kpi_tentativa");
+        if (divTentativa) {
+            var tentativa = json.tentativa ? json.tentativa : "-";
+            divTentativa.innerHTML = `#${tentativa}`;
+        }
+
+        document.getElementById("painel_resultados").style.display = "flex";
+
+        var formulario = document.getElementById("quiz_form");
+        if (formulario) formulario.reset();
+
+        gerarGrafico();
+    })
+    .catch(erro => {
+        console.log("Erro:", erro);
+    });
+}
+
+function gerarGrafico() {
+    var canvas = document.getElementById('resultadoGrafico');
     
+    if (!canvas) {
+        console.error("ERRO: Elemento canvas 'resultadoGrafico' não encontrado no HTML!");
+        return;
+    }
+
+    var ctx = canvas.getContext('2d');
+
+    if (grafico != null) {
+        grafico.destroy();
+    }
+
+    var painel = document.getElementById("painel_resultados");
+    if (painel) {
+        painel.style.display = "flex"; 
+    }
+
+    grafico = new Chart(ctx, {
+        type: "bar",
+        data: {
+            labels: ["Acertos", "Erros"],
+            datasets: [{
+                label: "Resultado do Quiz",
+                data: [acertos, erros],
+                backgroundColor: [
+                    "rgba(57, 255, 20, 0.8)",
+                    "rgba(255, 70, 70, 0.8)"
+                ],
+                borderColor: [
+                    "#39ff14",
+                    "#ff3c3c"
+                ],
+                borderWidth: 2,
+                borderRadius: 18,
+                borderSkipped: false
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            animation: { duration: 1200, easing: "easeOutQuart" },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: { color: "#39ff14", font: { size: 14, weight: "bold" } },
+                    grid: { color: "rgba(57,255,20,0.15)" }
+                },
+                x: {
+                    ticks: { color: "#39ff14", font: { size: 14, weight: "bold" } },
+                    grid: { display: false }
+                }
+            },
+            plugins: {
+                legend: { labels: { color: "#39ff14", font: { size: 16, weight: "bold" } } },
+                tooltip: {
+                    backgroundColor: "rgba(0,0,0,0.8)",
+                    titleColor: "#39ff14",
+                    bodyColor: "#ffffff",
+                    borderColor: "#39ff14",
+                    borderWidth: 1
+                }
+            }
+        }
+    });
+}
     resetarConteudo();
     homeContent.style.display ="block"
 
@@ -628,7 +915,11 @@ fill="#E8F0F2" stroke="none">
             resetarConteudo();
             resetarNav();
             homeContent.style.display = "block"
+            signUp.style.display = "none"
+            login.style.display = "none"
+            quiz.style.display = "block"
             logOut.style.display = "block"            
+            home.style.display = "block"            
     }
     function conteudoDeslogado(){
             resetarConteudo();
@@ -638,9 +929,15 @@ fill="#E8F0F2" stroke="none">
             logOut.style.display = "none"
             quiz.style.display = "none"
             albums.style.display = "none"
+            home.style.display = "block"
             
     }
 
-
+    function limparSessao() {
+    sessionStorage.clear();
     
+    window.location.reload();
+}
+
+
 </script>
